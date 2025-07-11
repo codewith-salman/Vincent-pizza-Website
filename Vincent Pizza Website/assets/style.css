@@ -1,0 +1,668 @@
+/* custom scrollbar design */
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* button */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0007; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0009; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0005; 
+}
+
+/* The track NOT covered by the handle.
+::-webkit-scrollbar-track-piece {
+  background: #000; 
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+/* Resizer */
+::-webkit-resizer {
+  background: #999; 
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 14px;
+  color: #dce4e8;
+  user-select: none;
+}
+/* -------------header section start--------------- */
+header {
+  position: relative;
+  background: #121618;
+  padding: 50px 90px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.schedule img, .logo img, .cart img {
+  display: block;
+}
+
+.schedule img {
+  max-width: 25px;
+  margin-right: 25px;
+}
+
+.right .phone,
+.left .amount {
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.right .time,
+.left .items {
+  color: #dce4e8;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  transition: .25s;
+}
+
+.cart {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.cart::after {
+  content: '0';
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  background: #ffc851;
+  border-radius: 50%;
+  color: #121618;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.cart:hover .left .items {
+  opacity: 1;
+  color: #ffc851;
+}
+
+.cart img {
+  transition: .10s;
+}
+
+.cart:active img {
+  transform: scale(0.9);
+}
+
+.logo img {
+  max-width: 180px;
+}
+
+.cart img {
+  max-width: 35px;
+  margin-left: 25px;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 98px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-btn span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #ffffff;
+  margin: 5px;
+  transition: .25s;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav li {
+  list-style: none;
+  margin-right: 40px;
+}
+
+.nav li a {
+  position: relative;
+  text-decoration: none;
+  color: #dce4e8;
+  letter-spacing: 3px;
+  transition: .25s;
+  display: inline-block;
+}
+
+.nav li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 1px;
+  background: #dce4e8;
+}
+
+.nav li a:hover {
+  color: #ffc851;
+}
+
+/* ----------------hero section start-------------  */
+
+.hero {
+  min-height: 100vh;
+  background: url(./images/slide_1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 90px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.imgBx img {
+  max-width: 600px;
+  filter: drop-shadow(5px 15px 20px #000000);
+  transform: rotate(0);
+  animation: imgrotate 5s linear infinite;
+}
+
+@keyframes imgrotate {
+  1% {
+    transform: rotate(5deg);
+  }
+  3% {
+    transform: rotate(-5deg);
+  }
+  5% {
+    transform: rotate(0);
+  }
+}
+
+.contentBx {
+  max-width: 700px;
+  margin-right: 50px;
+}
+
+.contentBx h1 {
+  font-size: 60px;
+  letter-spacing: 10px;
+  font-weight: 100;
+}
+
+.contentBx h2 {
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #ffffff;
+  margin-bottom: 40px;
+}
+
+.contentBx p {
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.contentBx .btn {
+  padding: 10px 20px;
+  background: #ffc851;
+  display: inline-block;
+  color: #121618;
+  cursor: pointer;
+  letter-spacing: 2px;
+  border: 2px solid #ffc851;
+  transition: .25s;
+}
+
+.contentBx .btn:hover {
+  background: transparent;
+  color: #ffc851;
+}
+
+
+
+/* --------------service section start------------- */
+
+.service {
+  background: url(./images/back_2.png);
+  padding: 90px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #121618;
+}
+
+.service .box {
+  margin: 0 10px;
+  max-width: 400px;
+}
+
+.service .box .top {
+  margin-bottom: 30px;
+}
+
+.service .box h2 {
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.service .box p {
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+/* -----------------hot sell start----------------  */
+
+.hot-sell {
+  padding: 90px 90px;
+  background: #121618;
+}
+
+.hot-sell h1 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  margin-bottom: 50px;
+}
+
+.hot-sell-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hot-sell-items .item {
+  max-width: 280px;
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hot-sell-items .item .four {
+  margin-right: 0;
+}
+
+.hot-sell-items .item:hover .name {
+  color: #ffc851;
+}
+
+.hot-sell-items .item img {
+  width: 200px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.hot-sell-items .item p {
+  text-align: center;
+}
+
+.hot-sell-items .item .name {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  transition: .25s;
+}
+
+
+.hot-sell-items .item .detail {
+  font-weight: 100;
+  font-family: 'Open Sans';
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+
+.hot-sell-items .item .prize {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+
+/* -----------------About start----------------  */
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 90px;
+  background: url(./images/back_1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #121618;
+  font-weight: 100;
+}
+
+.about .left {
+  max-width: 550px;
+  margin-right: 60px;
+}
+
+.about .left h2 {
+  font-size: 40px;
+  font-weight: 100;
+  letter-spacing: 7px;
+  margin-bottom: 40px;
+}
+
+.about .left p.bold {
+  font-weight: 100;
+  line-height: 2;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.about .left .separator {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.about .left p.first {
+  margin-bottom: 20px;
+}
+
+.about .left p.first,
+.about .left p.second {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.about .right {
+  max-width: 550px;
+}
+
+.about .right .review {
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px 30px;
+  border: 2px solid #121618;
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.about .right .client {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about .right .client img {
+  max-width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.about .right .client .client-detail h4 {
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.about .right .client .client-detail p {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.about .right .client:nth-child(4) {
+  margin-bottom: 0;
+}
+
+/* -------------responsive for 1200px-------------- */
+
+@media screen and (max-width: 1200px) {
+  /* header responsive */
+  header {
+    padding: 50px 40px;
+  }
+  .nav li {
+    margin-right: 20px;
+  }
+
+  /* hero responsive */
+  .imgBx img {
+    max-width: 400px;
+  }
+
+  /* hot sell responsive */
+  .hot-sell-items {
+    max-width: 700px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .hot-sell-items .item {
+    max-width: 320px;
+    margin: 40px 15px;
+  }
+}
+
+/* -------------responsive for 1024px-------------- */
+@media screen and (max-width: 1024px) {
+  /* header responsive */
+  header {
+    padding-top: 30px;
+  }
+
+  .header-top {
+    justify-content: center;
+  }
+
+  .schedule, .cart {
+    display: none;
+  }
+
+  /* hero responsive */
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .imgBx {
+    margin-bottom: 30px;
+  }
+  .contentBx {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  /* service responsive */
+  .service {
+    padding: 90px 40px;
+  }
+
+  /* hot sell responsive */
+  .hot-sell {
+    padding: 90px 40px;
+  }
+
+  /* about responsive */
+  .about {
+    padding: 90px 40px;
+  }
+}
+
+
+/* ------------- responsive for 768px----------- */
+@media screen and (max-width: 768px) {
+  /* header responsive */
+  header {
+    padding: 60px 20px;
+  }
+  .nav {
+    display: none;
+  }
+  .header-top {
+    margin: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(5px);
+  }
+
+  .menu-btn.active span:nth-child(2) {
+    display: none;
+  }
+
+  .menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-5px);
+  }
+
+  .nav.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 1px solid #dce4e89a;
+    margin-top: 40px;
+  }
+
+  .nav li {
+    margin-top: 20px;
+  }
+
+  .nav li a.active::after {
+    display: none;
+  }
+
+  /* hero responsive */
+  .hero {
+    padding: 50px 40px;
+  }
+
+  /* service responsive */
+  .service {
+    flex-direction: column;
+  }
+
+  .service .box {
+    margin: 20px 0;
+  }
+
+  /* about responsive */
+  .about {
+    flex-direction: column;
+  }
+
+  .about .left {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .about .left,
+  .about .right {
+    max-width: 100%;
+  }
+}
+
+/* --------------responsive for 650px-------------- */
+
+@media screen and (max-width: 650px) {
+
+  /* hero responsive */
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .imgBx img {
+    max-width: 300px;
+  }
+
+  .contentBx h1 {
+    font-size: 40px;
+  }
+
+  .contentBx h2 {
+    font-size: 24px;
+  }
+
+  /* service responsive */
+  .service {
+    padding: 90px 20px;
+  }
+
+  /* hot sell responsive */
+  .hot-sell {
+    padding: 90px 20px;
+  }
+
+  /* about responsive */
+  .about {
+    padding: 90px 20px;
+  }
+
+}
