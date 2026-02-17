@@ -79,8 +79,7 @@ This is a **front-end only project**, built for learning, UI practice, and portf
 - Featured specials and deals section  
 - Smooth hover animations and transitions  
 - Clean typography and spacing  
-- Modern and appetizing UI design  
-- Easy customization for different menus  
+- Modern and appetizing UI design   
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
