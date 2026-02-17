@@ -26,7 +26,7 @@
 <h1 align="center">🍕 Vincent Pizza Website</h1>
 
 A modern, appetizing, and fully responsive **Pizza Restaurant Website UI**  
-designed to showcase menu items, specials, and restaurant services with a clean and delicious layout.
+designed to showcase menu items, specials, and restaurant services with a clean and delicious layouts.
 
 <a href="https://vincent-pizza-website.vercel.app/"><strong>➥ Live Demo</strong></a>
 
