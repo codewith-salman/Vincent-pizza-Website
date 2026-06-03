@@ -21,7 +21,6 @@
 <img src="Vincent%20Pizza%20Website/assets/images/logo.png" alt="Vincent Pizza Logo" width="100"/>
 
 <br />
-<br />
 
 <h1 align="center">🍕 Vincent Pizza Website</h1>
 
@@ -68,8 +67,6 @@ This project is ideal for:
 
 This is a **front-end only project**, built for learning, UI practice, and portfolio showcasing — no backend or ordering system included.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ---
 
 ## ✨ Features
@@ -81,8 +78,6 @@ This is a **front-end only project**, built for learning, UI practice, and portf
 - Clean typography and spacing  
 - Modern and appetizing UI design   
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ---
 
 ## 🛠️ Built With
@@ -92,8 +87,6 @@ This project is built using:
 - **HTML5**  
 - **CSS3**  
 - **JavaScript (Vanilla)**  
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
 
